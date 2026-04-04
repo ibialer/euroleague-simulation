@@ -23,51 +23,42 @@ export interface Round {
   games: Game[];
 }
 
-// Standings after Round 34 + Bayern vs Fenerbahce from Round 35 (April 1, 2026)
+// Standings after Round 35 (completed April 3, 2026)
 // Points scored/conceded are approximate season totals based on available data
 export const CURRENT_STANDINGS: Team[] = [
   { rank: 1,  team: "Fenerbahce",        code: "FEN", wins: 23, losses: 12, gamesPlayed: 35, pointsScored: 2926, pointsConceded: 2758 },
   { rank: 2,  team: "Real Madrid",        code: "RMA", wins: 22, losses: 12, gamesPlayed: 34, pointsScored: 2856, pointsConceded: 2690 },
   { rank: 3,  team: "Olympiacos",         code: "OLY", wins: 22, losses: 12, gamesPlayed: 34, pointsScored: 2812, pointsConceded: 2654 },
-  { rank: 4,  team: "Hapoel Tel Aviv",    code: "HTA", wins: 21, losses: 13, gamesPlayed: 34, pointsScored: 2774, pointsConceded: 2680 },
-  { rank: 5,  team: "Valencia",           code: "VAL", wins: 21, losses: 13, gamesPlayed: 34, pointsScored: 2720, pointsConceded: 2652 },
+  { rank: 4,  team: "Valencia",           code: "VAL", wins: 22, losses: 13, gamesPlayed: 35, pointsScored: 2814, pointsConceded: 2733 },
+  { rank: 5,  team: "Hapoel Tel Aviv",    code: "HTA", wins: 21, losses: 13, gamesPlayed: 34, pointsScored: 2774, pointsConceded: 2680 },
   { rank: 6,  team: "Zalgiris",           code: "ZAL", wins: 21, losses: 14, gamesPlayed: 35, pointsScored: 2870, pointsConceded: 2810 },
   { rank: 7,  team: "Barcelona",          code: "BAR", wins: 20, losses: 15, gamesPlayed: 35, pointsScored: 2835, pointsConceded: 2800 },
   { rank: 8,  team: "Panathinaikos",      code: "PAN", wins: 20, losses: 15, gamesPlayed: 35, pointsScored: 2820, pointsConceded: 2790 },
   { rank: 9,  team: "Crvena Zvezda",      code: "CZV", wins: 19, losses: 16, gamesPlayed: 35, pointsScored: 2810, pointsConceded: 2795 },
   { rank: 10, team: "Monaco",             code: "MON", wins: 19, losses: 16, gamesPlayed: 35, pointsScored: 2840, pointsConceded: 2830 },
-  { rank: 11, team: "Dubai",              code: "DUB", wins: 18, losses: 17, gamesPlayed: 35, pointsScored: 2800, pointsConceded: 2815 },
-  { rank: 12, team: "Maccabi Tel Aviv",   code: "MTA", wins: 17, losses: 16, gamesPlayed: 33, pointsScored: 2690, pointsConceded: 2670 },
+  { rank: 11, team: "Maccabi Tel Aviv",   code: "MTA", wins: 18, losses: 16, gamesPlayed: 34, pointsScored: 2793, pointsConceded: 2759 },
+  { rank: 12, team: "Dubai",              code: "DUB", wins: 18, losses: 17, gamesPlayed: 35, pointsScored: 2800, pointsConceded: 2815 },
   { rank: 13, team: "Milan",              code: "MIL", wins: 17, losses: 18, gamesPlayed: 35, pointsScored: 2780, pointsConceded: 2820 },
   { rank: 14, team: "Partizan",           code: "PAR", wins: 15, losses: 20, gamesPlayed: 35, pointsScored: 2750, pointsConceded: 2850 },
   { rank: 15, team: "Bayern Munich",      code: "BAY", wins: 15, losses: 20, gamesPlayed: 35, pointsScored: 2770, pointsConceded: 2860 },
   { rank: 16, team: "Paris Basketball",   code: "PBS", wins: 14, losses: 21, gamesPlayed: 35, pointsScored: 2710, pointsConceded: 2830 },
-  { rank: 17, team: "Virtus Bologna",     code: "VIR", wins: 13, losses: 21, gamesPlayed: 34, pointsScored: 2620, pointsConceded: 2750 },
+  { rank: 17, team: "Virtus Bologna",     code: "VIR", wins: 13, losses: 22, gamesPlayed: 35, pointsScored: 2701, pointsConceded: 2844 },
   { rank: 18, team: "Baskonia",           code: "BAS", wins: 10, losses: 24, gamesPlayed: 34, pointsScored: 2580, pointsConceded: 2780 },
-  { rank: 19, team: "Anadolu Efes",       code: "EFS", wins: 10, losses: 24, gamesPlayed: 34, pointsScored: 2600, pointsConceded: 2800 },
+  { rank: 19, team: "Anadolu Efes",       code: "EFS", wins: 10, losses: 25, gamesPlayed: 35, pointsScored: 2689, pointsConceded: 2903 },
   { rank: 20, team: "ASVEL",              code: "ASV", wins:  8, losses: 26, gamesPlayed: 34, pointsScored: 2530, pointsConceded: 2810 },
 ];
 
 export const TOTAL_ROUNDS = 38;
 export const TOTAL_TEAMS = 20;
 
-// Remaining games from Round 35 (April 2-3) + Rounds 36-38
+// Remaining games: Rounds 36-38 + delayed games
 export const REMAINING_GAMES: Round[] = [
   {
-    round: 35,
-    dates: "April 2-3, 2026",
-    status: "in_progress",
+    round: 0,
+    dates: "Delayed games",
+    status: "upcoming",
     games: [
-      // Bayern 85-76 Fenerbahce already played on April 1
-      { home: "Hapoel Tel Aviv",  away: "Panathinaikos",    date: "2026-04-02" },
-      { home: "Zalgiris",         away: "Barcelona",        date: "2026-04-02" },
-      { home: "Dubai",            away: "Monaco",           date: "2026-04-02" },
-      { home: "Crvena Zvezda",    away: "Partizan",         date: "2026-04-02" },
-      { home: "Paris Basketball", away: "Milan",            date: "2026-04-02" },
-      { home: "Maccabi Tel Aviv", away: "Anadolu Efes",     date: "2026-04-02" },
-      { home: "ASVEL",            away: "Olympiacos",       date: "2026-04-03" },
-      { home: "Virtus Bologna",   away: "Valencia",         date: "2026-04-03" },
-      { home: "Baskonia",         away: "Real Madrid",      date: "2026-04-03" },
+      { home: "Maccabi Tel Aviv", away: "Hapoel Tel Aviv",  date: "2026-04-12" },
     ],
   },
   {
