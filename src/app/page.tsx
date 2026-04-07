@@ -6,6 +6,7 @@ import {
   calculateStandings,
   autoFillPicks,
   generateRandomScore,
+  isPlayInBattleGame,
   type GamePick,
 } from "@/lib/simulation";
 import StandingsTable from "@/components/StandingsTable";
@@ -53,8 +54,9 @@ export default function Home() {
     setPicks(buildGamePicks());
   }, []);
 
-  const totalGames = picks.length;
-  const completedGames = picks.filter(
+  const battlePicks = picks.filter(isPlayInBattleGame);
+  const totalGames = battlePicks.length;
+  const completedGames = battlePicks.filter(
     (p) =>
       p.homeScore !== null &&
       p.awayScore !== null &&
