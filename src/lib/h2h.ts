@@ -75,4 +75,7 @@ export const HEAD_TO_HEAD_RESULTS: H2HGame[] = [
   { home: "Hapoel Tel Aviv", away: "Panathinaikos", homeScore: 92, awayScore: 88 },
   { home: "Zalgiris", away: "Barcelona", homeScore: 83, awayScore: 71 },
   { home: "Dubai", away: "Monaco", homeScore: 101, awayScore: 91 },
+  // Round 36
+  { home: "Zalgiris", away: "Dubai", homeScore: 65, awayScore: 77 },
+  { home: "Barcelona", away: "Panathinaikos", homeScore: 79, awayScore: 93 },
 ];
